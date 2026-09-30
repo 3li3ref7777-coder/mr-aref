@@ -2,13 +2,11 @@ const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/mr-aref/'
-    : '/',
+  publicPath: '/',
   configureWebpack: {
     performance: {
-      hints: false, // لإيقاف ظهور تحذير حجم الملفات تماماً
-      maxEntrypointSize: 512000, // رفع الحد المسموح به إلى 500KiB
+      hints: false,
+      maxEntrypointSize: 512000,
       maxAssetSize: 512000
     }
   }
